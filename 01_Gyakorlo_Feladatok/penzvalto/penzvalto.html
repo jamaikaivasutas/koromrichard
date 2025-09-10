@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>exchange</title>
+  </head>
+  <body>
+    <input type="number" id="szam" min="1" />
+    <button id="atvalt">Átvált</button>
+
+    <script>
+      if (localStorage.getItem("szam")) {
+        document.getElementById("szam").value = localStorage.getItem("szam");
+      }
+
+      document.getElementById("atvalt").addEventListener("click", () => {
+        alert("átvált");
+        const ertek = Number(document.getElementById("szam").value);
+        localStorage.setItem("szam", ertek);
+      });
+    </script>
+  </body>
+</html>
