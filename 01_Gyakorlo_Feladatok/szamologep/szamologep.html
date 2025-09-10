@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="number" name="number1" id="number1">
+        <select id="types">
+            <option value="add">+</option>
+            <option value="sub">-</option>
+            <option value="mul">*</option>
+            <option value="div">/</option>
+        </select>
+        <input type="number" name="number2" id="number2">
+
+        <button type="button" id="calc">számol</button>
+    </form>
+
+    <div id="show"></div>
+</body>
+
+<script>
+    document.getElementById("calc").addEventListener("click", () => {
+        let num1 = parseInt(document.getElementById("number1").value);
+        localStorage.setItem("number1", num1);
+        let num2 = parseInt(document.getElementById("number2").value);
+        localStorage.setItem("number2", num2);
+
+        let x = 0;
+        let option = document.getElementById("types").value;
+
+        switch(option){
+            case "add":
+                x = num1+num2;
+                break;
+            case "sub":
+                x = num1-num2;
+                break;
+            case "mul":
+                x = num1*num2;
+                break;
+            case "div":
+                x = num1/num2;
+                break;
+            case _:
+                break;
+        }
+
+        return document.getElementById("show").innerHTML = "Eredmény: " + x;
+        });
+
+    if(localStorage.getItem("number1") && localStorage.getItem("number2")){
+            document.getElementById("number1").value = localStorage.getItem("number1");
+            document.getElementById("number2").value = localStorage.getItem("number2");
+        }
+    
+</script>
+</html>
