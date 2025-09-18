@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hőmérséklet átváltó</title>
+    <style>
+        body {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        label {
+            font-size: larger;
+        }
+    </style>
+    
+</head>
+<body>
+    <form>
+        <label for="celsius">Adja meg a Celsius hőmérsékletet:</label><br>
+        <input type="number" name="celsius" id="celsius">
+        <button type="button" onclick="calculate()">Számítás</button>
+    </form>
+    <div id="show"></div>
+
+    <script>
+    function calculate(){
+        let celsius = parseInt(document.getElementById("celsius").value);
+
+        if(isNan(celsius)){
+            return document.getElementById("show").innerHTML = "Kérem számot adjon meg!";
+        }
+        else {
+            let kelvin = celsius + 273.15;
+            let fahrenheit = celsius * 1.8 + 32;
+        }
+
+        return document.getElementById("show").innerHTML = celsius + "<p> &degC:" + kelvin + "K <br>" + celsius + "&degC:" + fahrenheit + "&degF" 
+    }
+       
+    </script>
+</html>
