@@ -21,17 +21,9 @@ function App() {
 
   return (
     <form>
-        <input type="number" placeholder="Add meg a számot" onChange={(e) => setFirstNumber(Number(e.target.value))}/>
-        <select id="types" onChange={(e) => setOperationValue(e.target.value)}>
-            <option value="add">+</option>
-            <option value="sub">-</option>
-            <option value="mul">*</option>
-            <option value="div">/</option>
-        </select>
-        <input type="number" placeholder="Add meg a másik számot" onChange={(e) => setSecondNumber(Number(e.target.value))}/>
-        <button type="button" onClick={onButtonClick}>számol</button>
-
-        <h2>{resultValue}</h2>
+        <h2>Adja meg celsiusban a hőmérsékletet</h2>
+        <input type="number"/>
+        <button onClick={onButtonClick})"></button>
     </form>
   )
 }
