@@ -1,5 +1,5 @@
-import './App.css'
-import {useState} from 'react';
+import "./App.css";
+import { useEffect, useState } from "react";
 
 function App() {
   const [firstNumber, setFirstNumber] = useState(0);
@@ -7,33 +7,41 @@ function App() {
   const [resultValue, setResultValue] = useState("");
   const [operationValue, setOperationValue] = useState("add");
 
-  const onButtonClick = () => {
-    if (operationValue == "add"){
-      setResultValue(`Az eredmény: ${firstNumber + secondNumber}`)
-    } else if (operationValue == "sub") {
-      setResultValue(`Az eredmény: ${firstNumber - secondNumber}`)
-    } else if (operationValue == "mul") {
-      setResultValue(`Az eredmény: ${firstNumber * secondNumber}`)
-    } else if (operationValue == "div") {
-      setResultValue(`Az eredmény: ${firstNumber / secondNumber}`)
+  useEffect(() => {
+    switch (operationValue) {
+      case "add":
+        setResultValue(`Az eredmény ${firstNumber + secondNumber}`);
+        break;
+      case "sub":
+        setResultValue(`Az eredmény ${firstNumber - secondNumber}`);
+        break;
+      case "mul":
+        setResultValue(`Az eredmény ${firstNumber * secondNumber}`);
+        break;
+      case "div":
+        setResultValue(`Az eredmény ${firstNumber / secondNumber}`);
+        break;
+      default:
+        setResultValue(`Ismeretlen művelet!`);
     }
-  }
+  }, [firstNumber, secondNumber, operationValue]);
 
   return (
     <form>
-        <input type="number" placeholder="Add meg a számot" onChange={(e) => setFirstNumber(Number(e.target.value))}/>
-        <select id="types" onChange={(e) => setOperationValue(e.target.value)}>
-            <option value="add">+</option>
-            <option value="sub">-</option>
-            <option value="mul">*</option>
-            <option value="div">/</option>
-        </select>
-        <input type="number" placeholder="Add meg a másik számot" onChange={(e) => setSecondNumber(Number(e.target.value))}/>
-        <button type="button" onClick={onButtonClick}>számol</button>
+      <input
+        type="number"
+        placeholder="Add meg a számot"
+        onChange={(e) => setFirstNumber(Number(e.target.value))}
+      />
+      <input
+        type="number"
+        placeholder="Add meg a másik számot"
+        onChange={(e) => setSecondNumber(Number(e.target.value))}
+      />
 
-        <h2>{resultValue}</h2>
+      <h2>{resultValue}</h2>
     </form>
-  )
+  );
 }
 
-export default App
+export default App;
