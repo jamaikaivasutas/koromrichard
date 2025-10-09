@@ -4,4 +4,4 @@ export type Pizza = {
     ar: number;
     imageUrl: string;
     id: number;
-};
+}
