@@ -1,14 +1,14 @@
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.tsx'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Pizza from "./Pizza.tsx"
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import App from "./App.tsx";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import SelectedPizza from "./pages/selectedPizza.tsx";
 
-createRoot(document.getElementById('root')!).render(
+createRoot(document.getElementById("root")!).render(
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<App />}/>
-      <Route path="/pizza/:id" element={ <Pizza />}/>
+      <Route path="/pizzak" element={<App />} />
+      <Route path="/pizzak/:id" element={<SelectedPizza />} />
     </Routes>
   </BrowserRouter>
-)
+);

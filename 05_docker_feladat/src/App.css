@@ -15,3 +15,38 @@
   color: floralwhite;
 }
 
+img:hover {
+  animation: rollAround 0.1s infinite;
+}
+
+@keyframes rollAround {
+  0% {
+    top: 0;
+    left: 0;
+    transform: rotate(0deg);
+  }
+
+  25% {
+    top: 0;
+    left: calc(100vw - 100px); /* Image width offset */
+    transform: rotate(90deg);
+  }
+
+  50% {
+    top: calc(100vh - 100px); /* Image height offset */
+    left: calc(100vw - 100px);
+    transform: rotate(180deg);
+  }
+
+  75% {
+    top: calc(100vh - 100px);
+    left: 0;
+    transform: rotate(270deg);
+  }
+
+  100% {
+    top: 0;
+    left: 0;
+    transform: rotate(360deg);
+  }
+}
