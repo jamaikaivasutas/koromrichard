@@ -1,40 +1,54 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import type { Pizza } from "../types/pizza";
 import apiClient from "../api/apiClient";
+import { useParams } from "react-router-dom";
 
-
-const NewPizza = () => {
+const EditPizza = () => {
+  const { id } = useParams();
   const [name, setName] = useState<string>("");
   const [description, setDescription] = useState<string>("");
   const [price, setPrice] = useState<number>(0);
   const [imageUrl, setImageUrl] = useState<string>("");
 
-  const AddPizza = () => {
+  useEffect(() => {
+    apiClient
+      .get(`/pizzak/${id}`)
+      .then((response) => {
+        setName(response.data.nev ?? "");
+        setDescription(response.data.leiras ?? "");
+        setPrice(response.data.ar ?? 0);
+        setImageUrl(response.data.imageUrl ?? "");
+      })
+      .catch((result) => console.error(result));
+  }, [id]);
+
+  const submit = () => {
     const p: Pizza = {
       nev: name,
       leiras: description,
       ar: price,
       imageUrl,
     };
-    if (p.ar < 1) {
-      alert("Az ar nem lehet kevesebb mint 1 forint!");
-    } else {
-      apiClient
-        .post("/pizzak", p)
-        .then((response) => alert(response.status))
-        .catch((result) => console.error(result));
-    }
+
+    apiClient
+      .put(`/pizzak/${id}`, p)
+      .then((response) => alert(response.status))
+      .catch((result) => console.error(result));
   };
 
   return (
     <>
-      <h1>Új pizza</h1>
+      <h1>Pizza szerkesztése</h1>
 
       <table>
         <tr>
           <td>Név</td>
           <td>
-            <input type="text" onChange={(e) => setName(e.target.value)} />
+            <input
+              type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
           </td>
         </tr>
         <tr>
@@ -42,6 +56,7 @@ const NewPizza = () => {
           <td>
             <input
               type="text"
+              value={description}
               onChange={(e) => setDescription(e.target.value)}
             />
           </td>
@@ -52,6 +67,7 @@ const NewPizza = () => {
             <input
               type="number"
               min={0}
+              value={price}
               onChange={(e) => setPrice(Number(e.target.value))}
             />
           </td>
@@ -61,15 +77,15 @@ const NewPizza = () => {
           <td>
             <input
               type="text"
-              min={0}
+              value={imageUrl}
               onChange={(e) => setImageUrl(e.target.value)}
             />
           </td>
         </tr>
       </table>
-      <button onClick={AddPizza}>Hozzáadás</button>
+      <button onClick={submit}>Hozzáadás</button>
     </>
   );
 };
 
-export default NewPizza;
+export default EditPizza;
