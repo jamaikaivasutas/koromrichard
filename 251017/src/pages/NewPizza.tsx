@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import type { Pizza } from "../types/pizza";
 import apiClient from "../api/apiClient";
+import "../styles/index.css";
 import { toast } from "react-toastify";
 
 const NewPizza = () => {
@@ -8,13 +9,6 @@ const NewPizza = () => {
   const [description, setDescription] = useState<string>("");
   const [price, setPrice] = useState<number>(0);
   const [imageUrl, setImageUrl] = useState<string>("");
-
-  useEffect(() => {
-    toast.info("cso teso");
-    toast.warning("haloo");
-    toast.error("halo");
-    toast.success("üdv világ");
-  }, []);
 
   const AddPizza = () => {
     const p: Pizza = {
@@ -28,8 +22,10 @@ const NewPizza = () => {
     } else {
       apiClient
         .post("/pizzak", p)
-        .then((response) => alert(response.status))
-        .catch((result) => console.error(result));
+        .then((response) =>
+          toast.success(`Pizza sikeresen hozzáadva (${response.status})`)
+        )
+        .catch((result) => toast.error(result));
     }
   };
 
@@ -74,14 +70,7 @@ const NewPizza = () => {
           </td>
         </tr>
       </table>
-      <button
-        onClick={() => {
-          AddPizza;
-          toast.success("Pizza sikeresen hozzáadva");
-        }}
-      >
-        Hozzáadás
-      </button>
+      <button onClick={AddPizza}>Hozzáadás</button>
     </>
   );
 };

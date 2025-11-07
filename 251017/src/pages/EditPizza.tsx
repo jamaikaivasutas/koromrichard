@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import type { Pizza } from "../types/pizza";
 import apiClient from "../api/apiClient";
+import "../styles/index.css";
 import { useParams } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const EditPizza = () => {
   const { id } = useParams();
@@ -19,7 +21,7 @@ const EditPizza = () => {
         setPrice(response.data.ar ?? 0);
         setImageUrl(response.data.imageUrl ?? "");
       })
-      .catch((result) => console.error(result));
+      .catch((result) => toast.error(result));
   }, [id]);
 
   const submit = () => {
@@ -32,8 +34,10 @@ const EditPizza = () => {
 
     apiClient
       .put(`/pizzak/${id}`, p)
-      .then((response) => alert(response.status))
-      .catch((result) => console.error(result));
+      .then((response) =>
+        toast.success(`Pizza sikeresen szerkesztve (${response.status})`)
+      )
+      .catch((result) => toast.error(result));
   };
 
   return (
@@ -83,7 +87,7 @@ const EditPizza = () => {
           </td>
         </tr>
       </table>
-      <button onClick={submit}>Hozzáadás</button>
+      <button onClick={submit}>Szerkesztés</button>
     </>
   );
 };
