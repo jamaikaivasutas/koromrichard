@@ -4,6 +4,8 @@ import NewPizza from "./pages/NewPizza.tsx";
 import EditPizza from "./pages/EditPizza.tsx";
 import { ToastContainer } from "react-toastify";
 import AllPizza from "./pages/AllPizza.tsx";
+import OnePizza from "./pages/OnePizza.tsx";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 createRoot(document.getElementById("root")!).render(
   <BrowserRouter>
@@ -16,9 +18,10 @@ createRoot(document.getElementById("root")!).render(
       limit={5}
     />
     <Routes>
-      <Route path="/all-pizza" element={<AllPizza />} />
+      <Route path="/" element={<AllPizza />} />
       <Route path="/add-pizza" element={<NewPizza />} />
       <Route path="/edit-pizza/:id" element={<EditPizza />} />
+      <Route path="/selected/:id" element={<OnePizza />} />
     </Routes>
   </BrowserRouter>
 );

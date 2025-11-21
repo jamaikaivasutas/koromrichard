@@ -5,17 +5,19 @@ import "../styles/index.css";
 import { toast } from "react-toastify";
 
 const NewPizza = () => {
-  const [name, setName] = useState<string>("");
-  const [description, setDescription] = useState<string>("");
-  const [price, setPrice] = useState<number>(0);
-  const [imageUrl, setImageUrl] = useState<string>("");
+  const [pizza, setPizza] = useState<Pizza>({
+    nev: "",
+    leiras: "",
+    ar: 0,
+    imageUrl: "",
+  });
 
   const AddPizza = () => {
     const p: Pizza = {
-      nev: name,
-      leiras: description,
-      ar: price,
-      imageUrl,
+      nev: pizza.nev,
+      leiras: pizza.leiras,
+      ar: pizza.ar,
+      imageUrl: pizza.imageUrl,
     };
     if (p.ar < 1) {
       alert("Az ar nem lehet kevesebb mint 1 forint!");
@@ -25,7 +27,9 @@ const NewPizza = () => {
         .then((response) =>
           toast.success(`Pizza sikeresen hozzáadva (${response.status})`)
         )
-        .catch((result) => toast.error(result));
+        .catch((result) =>
+          toast.error(`A pizza hozzáadása sikertelen (${result})`)
+        );
     }
   };
 
@@ -37,7 +41,10 @@ const NewPizza = () => {
         <tr>
           <td>Név</td>
           <td>
-            <input type="text" onChange={(e) => setName(e.target.value)} />
+            <input
+              type="text"
+              onChange={(e) => setPizza({ ...pizza, nev: e.target.value })}
+            />
           </td>
         </tr>
         <tr>
@@ -45,7 +52,7 @@ const NewPizza = () => {
           <td>
             <input
               type="text"
-              onChange={(e) => setDescription(e.target.value)}
+              onChange={(e) => setPizza({ ...pizza, leiras: e.target.value })}
             />
           </td>
         </tr>
@@ -55,7 +62,9 @@ const NewPizza = () => {
             <input
               type="number"
               min={0}
-              onChange={(e) => setPrice(Number(e.target.value))}
+              onChange={(e) =>
+                setPizza({ ...pizza, ar: Number(e.target.value) })
+              }
             />
           </td>
         </tr>
@@ -65,7 +74,7 @@ const NewPizza = () => {
             <input
               type="text"
               min={0}
-              onChange={(e) => setImageUrl(e.target.value)}
+              onChange={(e) => setPizza({ ...pizza, imageUrl: e.target.value })}
             />
           </td>
         </tr>
