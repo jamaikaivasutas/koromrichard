@@ -6,11 +6,11 @@ import { ToastContainer } from "react-toastify";
 import AllPizza from "./pages/AllPizza.tsx";
 import OnePizza from "./pages/OnePizza.tsx";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Cart from "./pages/Cart.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <BrowserRouter>
     <ToastContainer
-      position="top-center"
       theme="dark"
       closeOnClick={false}
       newestOnTop={true}
@@ -19,6 +19,7 @@ createRoot(document.getElementById("root")!).render(
     />
     <Routes>
       <Route path="/" element={<AllPizza />} />
+      <Route path="/cart" element={<Cart />} />
       <Route path="/add-pizza" element={<NewPizza />} />
       <Route path="/edit-pizza/:id" element={<EditPizza />} />
       <Route path="/selected/:id" element={<OnePizza />} />
