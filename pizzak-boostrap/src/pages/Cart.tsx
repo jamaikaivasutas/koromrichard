@@ -15,9 +15,9 @@ const Cart = () => {
       .catch((reason) => toast.error(reason));
   }, []);
 
-  const [cart, setCart] = useState<Array<number>>([
-    JSON.parse(localStorage.getItem("cart") ?? "[]"),
-  ]);
+  const [cart, setCart] = useState<Array<number>>(
+    JSON.parse(localStorage.getItem("cart") ?? "[]")
+  ); // csak ID-kat tárolok
 
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
