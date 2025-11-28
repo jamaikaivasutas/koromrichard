@@ -4,6 +4,7 @@ import apiClient from "../api/apiClient";
 import { toast } from "react-toastify";
 import { Button, Table } from "react-bootstrap";
 import { WiAlien } from "react-icons/wi";
+import { GiCardDiscard } from "react-icons/gi";
 
 const Cart = () => {
   const [pizzas, setPizzas] = useState<Array<Pizza>>([]);
@@ -53,6 +54,10 @@ const Cart = () => {
           })}
         </tbody>
       </Table>
+
+      <Button onClick={() => setCart([])} variant="warning">
+        <GiCardDiscard />
+      </Button>
     </>
   );
 };
