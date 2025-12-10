@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import type { Pizza } from "../types/pizza";
 import apiClient, { BACKEND_URL } from "../api/apiClient";
 import { toast } from "react-toastify";
+import { Button } from "react-bootstrap";
 
 const OnePizza = () => {
   const { id } = useParams();
@@ -32,6 +33,9 @@ const OnePizza = () => {
       <h2>{pizza?.nev}</h2>
       <h2>{pizza?.leiras}</h2>
       <h2>{pizza?.ar}Ft</h2>
+      <Button onClick={deletePizza} variant="outline-danger">
+        Törlés
+      </Button>
     </>
   );
 };

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import apiClient, { baseURL } from "../api/apiClient";
+import apiClient, { BACKEND_URL } from "../api/apiClient";
 import type { Pizza } from "../types/pizza";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
@@ -28,12 +28,12 @@ const AllPizza = () => {
     return (
       <Col>
         <Card style={{ width: "18rem" }}>
-          <Card.Img variant="top" src={`${baseURL}/kepek/${p.imageUrl}`} />
+          <Card.Img variant="top" src={`${BACKEND_URL}/kepek/${p.imageUrl}`} />
           <Card.Body>
             <Card.Title>{p.nev}</Card.Title>
             <Card.Text>{p.leiras}</Card.Text>
             <Button
-              onClick={() => navigate(`/pizza/${p.id}`)}
+              onClick={() => navigate(`/selected/${p.id}`)}
               variant="primary"
             >
               Megtekintés
