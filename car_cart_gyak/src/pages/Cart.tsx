@@ -1,24 +1,23 @@
 import { useEffect, useState } from "react";
-import type { Pizza } from "../types/pizza";
-import apiClient from "../api/apiClient";
-import { toast } from "react-toastify";
 import { Button, Table } from "react-bootstrap";
-import { WiAlien } from "react-icons/wi";
+import apiClient from "../api/apiClient";
+import type { Car } from "../types/Car";
+import { toast } from "react-toastify";
+import { SlAnchor } from "react-icons/sl";
 import { GiCardDiscard } from "react-icons/gi";
 
 const Cart = () => {
-  const [pizzas, setPizzas] = useState<Array<Pizza>>([]);
+  const [cars, setCars] = useState<Array<Car>>([]);
+  const [cart, setCart] = useState<Array<number>>(
+    JSON.parse(localStorage.getItem("cart") ?? "[]")
+  );
 
   useEffect(() => {
     apiClient
-      .get("/pizzak")
-      .then((response) => setPizzas(response.data))
-      .catch((reason) => toast.error(reason));
-  }, []);
-
-  const [cart, setCart] = useState<Array<number>>(
-    JSON.parse(localStorage.getItem("cart") ?? "[]")
-  ); // csak ID-kat tárolok
+      .get("/autok")
+      .then((res) => setCars(res.data))
+      .catch(() => toast.error("Autók betöltése sikertelen"));
+  });
 
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
@@ -33,20 +32,21 @@ const Cart = () => {
     <>
       <Table striped bordered>
         <thead>
-          <th>Név</th>
+          <th>Márka</th>
+          <th>Modell</th>
           <th>Ár</th>
-          <th>Törlés</th>
         </thead>
         <tbody>
           {cart.map((value, index) => {
-            const pizza = pizzas.find((p) => p.id === value);
+            const car = cars.find((p) => p.id === value);
             return (
               <tr>
-                <td>{pizza?.nev}</td>
-                <td>{pizza?.ar} Ft</td>
+                <td>{car?.marka}</td>
+                <td>{car?.modell}</td>
+                <td>{car?.ar}</td>
                 <td>
                   <Button onClick={() => removeItem(index)} variant="danger">
-                    <WiAlien />
+                    <SlAnchor />
                   </Button>
                 </td>
               </tr>
