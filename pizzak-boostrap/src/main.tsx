@@ -8,6 +8,7 @@ import OnePizza from "./pages/OnePizza.tsx";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Cart from "./pages/Cart.tsx";
 import Login from "./pages/Login.tsx";
+import Orders from "./pages/Orders.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <BrowserRouter>
@@ -25,6 +26,7 @@ createRoot(document.getElementById("root")!).render(
       <Route path="/edit-pizza/:id" element={<EditPizza />} />
       <Route path="/selected/:id" element={<OnePizza />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/orders" element={<Orders />} />
     </Routes>
   </BrowserRouter>
 );

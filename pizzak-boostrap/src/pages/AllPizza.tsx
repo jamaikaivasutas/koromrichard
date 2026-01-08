@@ -36,10 +36,6 @@ const AllPizza = () => {
 
   const generateCard = (p: Pizza) => {
     return (
-<<<<<<< HEAD
-      <Col>
-        <Card style={{ width: "18rem" }}>
-=======
       <Col
         xs={"auto"}
         sm={"auto"}
@@ -49,31 +45,13 @@ const AllPizza = () => {
         key={p.id}
       >
         <Card id="pizzakartya" className="h-100" style={{ width: "18rem" }}>
->>>>>>> 8bb40d6f9ac70a71450adf211f1727e8faddcd8c
           <Card.Img variant="top" src={`${BACKEND_URL}/kepek/${p.imageUrl}`} />
           <Card.Body>
             <Card.Title>{p.nev}</Card.Title>
             <Card.Text>{p.leiras}</Card.Text>
-<<<<<<< HEAD
-            <Button
-              onClick={() => navigate(`/selected/${p.id}`)}
-              variant="primary"
-            >
-              Megtekintés
-            </Button>
-            <Button
-              onClick={() => {
-                setKosar([...kosar, Number(p.id)]);
-                toast.success("Sikeresen a kosárba tetted a terméket!");
-              }}
-              variant="success"
-            >
-              Kosárba
-            </Button>
-=======
             <div className="d-flex justify-content-between mt-auto">
               <Button
-                onClick={() => navigate(`/pizza/${p.id}`)}
+                onClick={() => navigate(`/selected/${p.id}`)}
                 variant="primary"
               >
                 Megtekintés
@@ -88,7 +66,6 @@ const AllPizza = () => {
                 Kosárba
               </Button>
             </div>
->>>>>>> 8bb40d6f9ac70a71450adf211f1727e8faddcd8c
           </Card.Body>
         </Card>
       </Col>
