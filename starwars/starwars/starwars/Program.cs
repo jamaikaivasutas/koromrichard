@@ -37,19 +37,26 @@ var averageOfMidochlorian = characters.Average(x => x.MidichlorianCount);
 
 Console.WriteLine($"Az átlag Midoklórián szám: {Math.Round(averageOfMidochlorian, 2)} \n Az összes Midoklórián szám: {sumOfMidochlorian}");
 
+//mindketto kiiratva
+
 var leastMidochlorian = characters.Min(x => x.MidichlorianCount);
 var charactersWithLeastMidochlorian = characters.Where(X => X.MidichlorianCount == leastMidochlorian).ToList();
+
 
 foreach (var data in charactersWithLeastMidochlorian)
 {
     Console.WriteLine($"A legkevesebb Midoklórián szám {leastMidochlorian}, amivel {data.Name} rendelkezik");
 }
 
+//csak az egyik
+
 var characterWithLeastMidochlorian = characters.MinBy(x => x.MidichlorianCount);
 
 Console.WriteLine($"A legkevesebb Midoklórián szám {characterWithLeastMidochlorian.MidichlorianCount} amivel {characterWithLeastMidochlorian.Name} rendelkezik");
 
 
+var characterWithMostMidochlorian = characters.MaxBy(x => x.MidichlorianCount);
 
+Console.WriteLine($"A legtöbb Midoklórián szám {characterWithMostMidochlorian.MidichlorianCount} amivel {characterWithMostMidochlorian.Name} rendelkezik");
 
 

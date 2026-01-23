@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\b1duzale\\Desktop\\starwars\\starwars\\",
+  "WorkspaceRootPath": "C:\\Users\\b1duzale\\Desktop\\koromrichard\\starwars\\starwars\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{94090DC1-8E00-4258-AF74-85A5FCF24EDC}|starwars\\starwars.csproj|c:\\users\\b1duzale\\desktop\\starwars\\starwars\\starwars\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{94090DC1-8E00-4258-AF74-85A5FCF24EDC}|starwars\\starwars.csproj|c:\\users\\b1duzale\\desktop\\koromrichard\\starwars\\starwars\\starwars\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{94090DC1-8E00-4258-AF74-85A5FCF24EDC}|starwars\\starwars.csproj|solutionrelative:starwars\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{94090DC1-8E00-4258-AF74-85A5FCF24EDC}|starwars\\starwars.csproj|c:\\users\\b1duzale\\desktop\\starwars\\starwars\\starwars\\characters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{94090DC1-8E00-4258-AF74-85A5FCF24EDC}|starwars\\starwars.csproj|c:\\users\\b1duzale\\desktop\\koromrichard\\starwars\\starwars\\starwars\\characters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{94090DC1-8E00-4258-AF74-85A5FCF24EDC}|starwars\\starwars.csproj|solutionrelative:starwars\\characters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -28,24 +28,23 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Characters.cs",
-              "DocumentMoniker": "C:\\Users\\b1duzale\\Desktop\\starwars\\starwars\\starwars\\Characters.cs",
+              "DocumentMoniker": "C:\\Users\\b1duzale\\Desktop\\koromrichard\\starwars\\starwars\\starwars\\Characters.cs",
               "RelativeDocumentMoniker": "starwars\\Characters.cs",
-              "ToolTip": "C:\\Users\\b1duzale\\Desktop\\starwars\\starwars\\starwars\\Characters.cs",
+              "ToolTip": "C:\\Users\\b1duzale\\Desktop\\koromrichard\\starwars\\starwars\\starwars\\Characters.cs",
               "RelativeToolTip": "starwars\\Characters.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-23T07:10:14.922Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-23T07:10:14.922Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\b1duzale\\Desktop\\starwars\\starwars\\starwars\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\b1duzale\\Desktop\\koromrichard\\starwars\\starwars\\starwars\\Program.cs",
               "RelativeDocumentMoniker": "starwars\\Program.cs",
-              "ToolTip": "C:\\Users\\b1duzale\\Desktop\\starwars\\starwars\\starwars\\Program.cs",
+              "ToolTip": "C:\\Users\\b1duzale\\Desktop\\koromrichard\\starwars\\starwars\\starwars\\Program.cs",
               "RelativeToolTip": "starwars\\Program.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAArwCcAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAACAAAAAAAAAAAAAowCsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-23T07:09:00.252Z",
               "EditorCaption": ""

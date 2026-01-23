@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\b1duzale\\Desktop\\starwars\\starwars\\starwars\\starwars.csproj": {}
+    "C:\\Users\\b1duzale\\Desktop\\koromrichard\\starwars\\starwars\\starwars\\starwars.csproj": {}
   },
   "projects": {
-    "C:\\Users\\b1duzale\\Desktop\\starwars\\starwars\\starwars\\starwars.csproj": {
+    "C:\\Users\\b1duzale\\Desktop\\koromrichard\\starwars\\starwars\\starwars\\starwars.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\b1duzale\\Desktop\\starwars\\starwars\\starwars\\starwars.csproj",
+        "projectUniqueName": "C:\\Users\\b1duzale\\Desktop\\koromrichard\\starwars\\starwars\\starwars\\starwars.csproj",
         "projectName": "starwars",
-        "projectPath": "C:\\Users\\b1duzale\\Desktop\\starwars\\starwars\\starwars\\starwars.csproj",
+        "projectPath": "C:\\Users\\b1duzale\\Desktop\\koromrichard\\starwars\\starwars\\starwars\\starwars.csproj",
         "packagesPath": "C:\\Users\\b1duzale\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\b1duzale\\Desktop\\starwars\\starwars\\starwars\\obj\\",
+        "outputPath": "C:\\Users\\b1duzale\\Desktop\\koromrichard\\starwars\\starwars\\starwars\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
