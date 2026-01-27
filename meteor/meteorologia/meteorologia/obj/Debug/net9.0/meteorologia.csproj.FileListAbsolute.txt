@@ -1,0 +1,16 @@
+C:\Users\b1duzale\Desktop\koromrichard\meteor\meteorologia\meteorologia\bin\Debug\net9.0\meteorologia.exe
+C:\Users\b1duzale\Desktop\koromrichard\meteor\meteorologia\meteorologia\bin\Debug\net9.0\tavirathu13.txt
+C:\Users\b1duzale\Desktop\koromrichard\meteor\meteorologia\meteorologia\bin\Debug\net9.0\meteorologia.deps.json
+C:\Users\b1duzale\Desktop\koromrichard\meteor\meteorologia\meteorologia\bin\Debug\net9.0\meteorologia.runtimeconfig.json
+C:\Users\b1duzale\Desktop\koromrichard\meteor\meteorologia\meteorologia\bin\Debug\net9.0\meteorologia.dll
+C:\Users\b1duzale\Desktop\koromrichard\meteor\meteorologia\meteorologia\bin\Debug\net9.0\meteorologia.pdb
+C:\Users\b1duzale\Desktop\koromrichard\meteor\meteorologia\meteorologia\obj\Debug\net9.0\meteorologia.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\b1duzale\Desktop\koromrichard\meteor\meteorologia\meteorologia\obj\Debug\net9.0\meteorologia.AssemblyInfoInputs.cache
+C:\Users\b1duzale\Desktop\koromrichard\meteor\meteorologia\meteorologia\obj\Debug\net9.0\meteorologia.AssemblyInfo.cs
+C:\Users\b1duzale\Desktop\koromrichard\meteor\meteorologia\meteorologia\obj\Debug\net9.0\meteorologia.csproj.CoreCompileInputs.cache
+C:\Users\b1duzale\Desktop\koromrichard\meteor\meteorologia\meteorologia\obj\Debug\net9.0\meteorologia.sourcelink.json
+C:\Users\b1duzale\Desktop\koromrichard\meteor\meteorologia\meteorologia\obj\Debug\net9.0\meteorologia.dll
+C:\Users\b1duzale\Desktop\koromrichard\meteor\meteorologia\meteorologia\obj\Debug\net9.0\refint\meteorologia.dll
+C:\Users\b1duzale\Desktop\koromrichard\meteor\meteorologia\meteorologia\obj\Debug\net9.0\meteorologia.pdb
+C:\Users\b1duzale\Desktop\koromrichard\meteor\meteorologia\meteorologia\obj\Debug\net9.0\meteorologia.genruntimeconfig.cache
+C:\Users\b1duzale\Desktop\koromrichard\meteor\meteorologia\meteorologia\obj\Debug\net9.0\ref\meteorologia.dll
