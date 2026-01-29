@@ -40,11 +40,21 @@ foreach (var instance in noWind)
 }
 
 Console.WriteLine("5. feladat");
+var groupedByCity = weatherData.GroupBy(x => x.City);
+foreach (var city in groupedByCity)
+{
+    var cityTemps = city.ToList();
+    var requiredTimes = new List<string> { "01", "07", "13", "19" };
+    var hasAllRequiredTimes = requiredTimes.All(rt => cityTemps.Any(ct => ct.Time.StartsWith(rt)));
+    var highest = cityTemps.Max(ct => ct.Temperature);
+    var lowest = cityTemps.Min(ct => ct.Temperature);
 
-//Kozephomerseklettel foglalkozok kesobb
-var allTimes = weatherData.Select(x => x.Time).ToList();
-
-
+    Console.WriteLine(
+        hasAllRequiredTimes
+        ? $"{city.Key} {Math.Round(cityTemps.Where(ct => requiredTimes.Any(rt => ct.Time.StartsWith(rt))).Average(ct => ct.Temperature))} C° Hőmérséklet ingadozás: {highest-lowest} C°"
+        : $"{city.Key} NA; Hőmérséklet ingadozás: {highest-lowest} C°"
+    );
+}
 
 
 
