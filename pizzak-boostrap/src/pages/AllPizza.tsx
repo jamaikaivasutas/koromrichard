@@ -19,6 +19,7 @@ const AllPizza = () => {
   const navigate = useNavigate();
   const csicska = "ciskscaki";
   const csicsak2 = "haljmeg";
+  const csicska3 = "bungabungado";
 
   const [pizzak, setPizzak] = useState<Array<Pizza>>([]);
   const [cart, setCart] = useState<Array<number>>(
