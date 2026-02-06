@@ -21,6 +21,7 @@ const AllPizza = () => {
   const csicsak2 = "haljmeg";
   const csicska3 = "bungabungado";
   const csicsak4 = "huskycsicsak"
+  const csicsak5 = "mukodjmargeci"
 
   const [pizzak, setPizzak] = useState<Array<Pizza>>([]);
   const [cart, setCart] = useState<Array<number>>(
