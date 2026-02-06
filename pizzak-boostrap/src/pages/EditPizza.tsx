@@ -33,7 +33,7 @@ const EditPizza = () => {
     apiClient
       .put(`/pizzak/${id}`, p)
       .then((response) =>
-        toast.success(`Pizza sikeresen szerkesztve (${response.status})`)
+        toast.success(`Pizza sikeresen szerkesztve (${response.status})`),
       )
       .catch((result) => toast.error(result));
   };

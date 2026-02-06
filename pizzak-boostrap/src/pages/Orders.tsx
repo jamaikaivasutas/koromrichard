@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
-import apiClient, { auth, BACKEND_URL } from "../api/apiClient";
+import apiClient, { auth } from "../api/apiClient";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import "../styles/Pizza.css";
 import { Button, Container, Row } from "react-bootstrap";
 import type { Order } from "../types/Order";
-import type { User } from "../types/User";
 
 const Orders = () => {
   const navigate = useNavigate();
@@ -20,7 +19,7 @@ const Orders = () => {
     } else {
       toast.error("Ki vagy jelentkezve.");
     }
-  }, [auth]);
+  }, []);
 
   if (auth.username != null && auth.password != null) {
     return (
