@@ -17,14 +17,7 @@ import { IoCartOutline } from "react-icons/io5";
 
 const AllPizza = () => {
   const navigate = useNavigate();
-  const csicska = "ciskscaki";
-  const csicsak2 = "haljmeg";
-  const csicska3 = "bungabungado";
-  const csicsak4 = "huskycsicsak"
-  const csicsak5 = "mukodjmargeci"
-  const fasz = false;
-  const fasz3 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-
+  
   const [pizzak, setPizzak] = useState<Array<Pizza>>([]);
   const [cart, setCart] = useState<Array<number>>(
     JSON.parse(localStorage.getItem("cart") ?? "[]"),
