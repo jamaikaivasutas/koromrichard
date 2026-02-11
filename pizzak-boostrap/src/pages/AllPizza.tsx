@@ -17,7 +17,7 @@ import { IoCartOutline } from "react-icons/io5";
 
 const AllPizza = () => {
   const navigate = useNavigate();
-  
+
   const [pizzak, setPizzak] = useState<Array<Pizza>>([]);
   const [cart, setCart] = useState<Array<number>>(
     JSON.parse(localStorage.getItem("cart") ?? "[]"),
